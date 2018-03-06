@@ -1,0 +1,185 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	-ms-flex-align: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  color: #333;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+section {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 75%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 5% auto;
+  padding: 5%;
+  width: 75%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  line-height: 1.5;
+  margin-top: 5px;
+  text-align: center;
+}
+
+h3 {
+  display: none;
+  margin: 15px 0;
+  min-height: 45px;
+}
+
+h4 {
+  margin: 0;
+  text-align: left;
+}
+
+h4:first-of-type {
+  margin-top: 20px;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  text-align: left;
+}
+
+p.correct {
+  color: green;
+}
+
+p.incorrect {
+  color: red;
+}
+
+span {
+  font-weight: bold;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+
+/* Start Quiz button*/
+
+button {
+  border: 1px solid #697294;
+  border-radius: 10px;
+  background-color: #7c83a1;
+  color: #fff;
+  margin: 0 15%;
+  padding: 25px 0;
+}
+
+button:not(:focus):hover {
+  background-color: #444f7a;
+  border-color: #363f61;
+}
+
+/* Fact/Fiction buttons */
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  background: #7c83a1;
+  border-color: #697294;
+}
+
+input:checked + label:hover {
+  background: #444f7a;
+  border-color: #363f61;
+}
+
+label {
+  background-color: #7c83a1;
+  border: 1px solid #697294;
+  border-radius: 0.25em;
+  color: #fff;
+  display: none;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  margin: 1.5em 0;
+}
+
+label:hover,
+label:active {
+  background-color: #444f7a;
+  border-color: #363f61;
+}
+
+
+/* Question Tracker */
+
+i.fa.fa-circle-o {
+  font-size: .875em;
+  padding-left: 2px;
+}
+
+
+/* Questions Container */
+
+#questions-container {
+  margin: auto 5%;
+}
+
+#questions-container p.explanation {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+
+/* Summary Container */
+
+#summary-container div:first-of-type {
+  border-bottom: 2px solid;
+  border-radius: 15px;
+  padding-bottom: 15px;
+}
+
+#summary-container div:last-of-type {
+  border-radius: 15px;
+  border-top: 2px solid;
+  padding-top: 15px;
+}
+
+#summary-container .content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  line-height: 1.25;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #summary-container .content {
+    flex-direction: column;
+  }
+}
